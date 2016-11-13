@@ -80,11 +80,12 @@ public class ListaEnlazada {
         {
             NodoLista actual = primerNodo;
             
-            while(actual != ultimoNodo)
+            while(actual.siguienteNodo != ultimoNodo)
             {
                 actual = actual.siguienteNodo;
             }
             
+            ultimoNodo = actual;
             actual.siguienteNodo = null;
         }
         
